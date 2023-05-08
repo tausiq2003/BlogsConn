@@ -1,0 +1,17 @@
+@import './colors';
+/* global styling */
+ * {
+	 margin: 0;
+	 padding: 0;
+	 box-sizing: border-box;
+	 font-family: "Poppins", sans-serif;
+}
+ body {
+	 background-color: gold;
+}
+ h1 {
+	 font-size: 2rem;
+	 font-weight: 700;
+	 color: black;
+}
+ 

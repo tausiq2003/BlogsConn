@@ -1,0 +1,14 @@
+.submit__btn{
+    padding: 0.7rem;
+    border: 0;
+    background-color: $common;
+    cursor: pointer;
+    transition: all .17s ease-in-out;
+    color: wheat;
+    font-weight: 700;
+
+    &:hover{
+        background-color: $banner;
+        color: $black;
+    }
+}

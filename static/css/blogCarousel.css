@@ -1,0 +1,29 @@
+@import './colors';
+/* global styling */
+ * {
+	 margin: 0;
+	 padding: 0;
+	 box-sizing: border-box;
+	 font-family: "Poppins", sans-serif;
+}
+ .home__blogCarousel {
+	 width: 80%;
+	 margin: 0 11vw;
+	 margin-top: 4vh;
+	 padding: 20px;
+}
+ .home__blogCarousel .home__blogCarouselHeading {
+	 text-align: center;
+	 margin-bottom: 50px;
+	 color: #0488d1;
+}
+ @media only screen and (max-width: 769px) {
+	 .home__blogCarousel {
+		 width: 100%;
+		 margin: 4vh 0 0 0;
+	}
+	 .home__blogCarousel .card {
+		 box-shadow: none;
+	}
+}
+ 
