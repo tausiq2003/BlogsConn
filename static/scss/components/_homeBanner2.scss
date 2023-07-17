@@ -1,0 +1,48 @@
+// Banner Two Component
+
+.home__BannerTwo{
+    width: 100%;
+    height: 70vh;
+    margin: 90px 0;
+
+    img{
+        @include imageCover;
+    }
+
+    .home__BannerTwoDetails{
+        position: relative;
+        top: -55vh;
+        width: 35%;
+        margin-left: 5%;
+        h3{
+            font-family: "Proxima Nova";
+            font-size: 1.6rem;
+            color: $gray;
+        }
+    }
+}
+
+@media only screen and (max-width: 769px) {
+    .home__BannerTwo{
+        .home__BannerTwoDetails{
+            left: 14%;
+            top: -45vh;
+            width: 75%;
+        }
+    }
+}
+
+@media only screen and (max-width: 413px) {
+    .home__BannerTwo{
+        height: 50vh;
+        .home__BannerTwoDetails{
+            left: 12%;
+            top: -35vh;
+            width: 75%;
+
+            h3{
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@import './colors';
+/* global styling */
+ * {
+	 margin: 0;
+	 padding: 0;
+	 box-sizing: border-box;
+	 font-family: "Poppins", sans-serif;
+}
+ .submit__btn {
+	 padding: 0.7rem;
+	 border: 0;
+	 background-color: #0488d1;
+	 cursor: pointer;
+	 transition: all 0.17s ease-in-out;
+	 color: wheat;
+	 font-weight: 700;
+}
+ .submit__btn:hover {
+	 background-color: rgba(0, 0, 0, 0.3);
+	 color: #080808;
+}
+ 

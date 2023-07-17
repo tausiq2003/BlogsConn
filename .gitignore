@@ -1,0 +1,6 @@
+/node_modules
+config.php
+static/node_modules
+
+example.php
+/vendor

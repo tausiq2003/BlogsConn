@@ -1,0 +1,46 @@
+// Search Page 
+
+.search__mainContainer{
+    padding-top: 8vh;
+}
+
+.search__heading{
+    margin: 40px 0;
+    text-align: center;
+}
+
+.search__noDataFound{
+    display: flex;
+    justify-content: center;
+
+    img{
+        object-fit: contain;
+    }
+}
+
+.search-card{
+    max-height: 550px;
+    overflow: scroll;
+}
+
+.search-card::-webkit-scrollbar{
+    display: none;
+}
+
+@media only screen and (max-width: 413px) {
+
+    .search__noDataFound{
+        display: flex;
+        justify-content: center;
+        height: 50vh;
+        width: 100%;
+    
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+

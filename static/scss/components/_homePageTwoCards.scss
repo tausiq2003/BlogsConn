@@ -1,0 +1,116 @@
+// Blog 2 Cards component
+
+.home__blogCardsBox{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 45vh;
+    margin: 50px 0;
+
+    .home__blogCards{
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 70%;
+
+        .home__blogCard1{
+            height: 100%;
+            width: 45%;
+            margin-left: 10px;
+
+            img{
+                @include imageCover;
+                transition: all .17s ease-in-out;
+
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+        }
+
+        .home__blogCardDetails{
+            position: relative;
+            top: -32vh;
+            width: 70%;
+            left: 15%;
+            padding: 20px;
+            background-color: $blogCards_Two_banner;
+            border: 1px solid $white;
+
+            button{
+                width: auto;
+                padding: 5px;
+                margin-left: 38%;
+                margin-bottom: 10px;
+                border: 0;
+                color: $white;
+                font-size: 1rem;
+                font-family: 900;
+                text-transform: uppercase;
+                background-color: $common2;
+            }
+
+            h3{
+                background: transparent;
+                color: $white;
+                font-size: 1.4rem;
+            }
+
+            .blog__details{
+                
+                display: flex;
+                justify-content: center;
+                p{
+                    font-size: 0.8rem;
+                    color: $blogCards_Two_details !important;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 769px) {
+    .home__blogCardsBox{
+        height: 40vh;
+        margin: 90px 0;
+
+        .home__blogCards{
+            width: 100%;
+
+            .home__blogCardDetails{
+                top: -30vh;
+
+                button{
+                    width: auto;
+                }
+            }
+        }
+
+    }
+}
+
+
+@media only screen and (max-width: 413px) {
+    .home__blogCardsBox{
+        height: 80vh;
+
+        .home__blogCards{
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+
+            .home__blogCard1{
+                width: 100%;
+            }
+
+            .home__blogCardDetails{
+                top: -30vh;
+
+                button{
+                    width: auto;
+                }
+            }
+        }
+
+    }
+}

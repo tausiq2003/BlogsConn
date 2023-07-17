@@ -1,0 +1,58 @@
+# Assigning file size
+php_value upload_max_filesize 10M
+php_value post_max_size 10M
+
+# Turns on the RewriteEngine
+RewriteEngine on
+
+# Rewrite condition check (requested file should not be a folder)
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewritew condition check (request should be aa file)
+RewriteCond %{REQUEST_FILENAME}\.php -f
+
+# Redirects to index page with some information about the operation performed
+RewriteRule ^index/([0-9a-zA-Z_-]+) index.php?info=$1 [NC,L]
+RewriteRule ^index/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+) index.php?lang=$1&info=$2 [NC,L]
+
+# Redirects to home page with some information about the operation performed
+RewriteRule ^home/([0-9a-zA-Z_-]+) home.php?info=$1 [NC,L]
+
+# Redirects to blogPage page with some information about the operation performed
+RewriteRule ^blogPage/([0-9]+)/([0-9a-zA-Z_-]+) blogPage.php?id=$1&lang=$2 [NC,L]
+
+RewriteRule ^blogPage/([0-9]+) blogPage.php?id=$1 [NC,L]
+
+# Redirects to search page with some information about the operation performed
+RewriteRule ^search/([0-9a-zA-Z_-]+) search.php?searchBar=$1 [NC,L]
+
+# Redirects to profile page with some information about the operation performed
+RewriteRule ^profile/([0-9a-zA-Z_-]+) profile.php?uid=$1 [NC,L]
+
+# Redirects to login page with some information about the operation performed
+RewriteRule ^login/([0-9a-zA-Z_-]+) login.php?info=$1 [NC,L]
+
+# Redirects to register page with some information about the operation performed
+RewriteRule ^register/([0-9a-zA-Z_-]+) register.php?info=$1 [NC,L]
+
+# Redirects to editBlog page with some information about the operation performed
+RewriteRule ^editBlog/([0-9a-zA-Z_-]+) editBlog.php?id=$1 [NC,L]
+
+# Directs to login page.
+RewriteRule ^login login.php [NC,L]
+# Directs to logout page
+RewriteRule ^logout logout.php [NC,L]
+# Directs to register page
+RewriteRule ^register register.php [NC,L]
+# Directs to index page
+RewriteRule ^index index.php [NC,L]
+# Directs to home page
+RewriteRule ^home home.php [NC,L]
+# Directs to createPost page
+RewriteRule ^createPost createPost.php [NC,L]
+# Directs to forgot Password page
+RewriteRule ^forgotPassword fpemail.php [NC,L]
+RewriteRule ^study study.php [NC,L]
+RewriteRule ^food food.php [NC,L]
+
+DirectoryIndex home.php index.php
